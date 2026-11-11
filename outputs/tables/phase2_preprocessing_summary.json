@@ -1,0 +1,50 @@
+{
+  "original_rows": 7043,
+  "missing_total_charges_filled_with_zero": 11,
+  "customerID_used_as_feature": false,
+  "target_mapping": {
+    "No": 0,
+    "Yes": 1
+  },
+  "split": {
+    "method": "train_test_split with stratify=y",
+    "test_size": 0.2,
+    "random_state": 42,
+    "train_rows": 5634,
+    "test_rows": 1409,
+    "train_churn_counts": {
+      "0": 4139,
+      "1": 1495
+    },
+    "test_churn_counts": {
+      "0": 1035,
+      "1": 374
+    }
+  },
+  "feature_counts": {
+    "numeric_input_features": 4,
+    "categorical_input_features": 15,
+    "transformed_features": 45
+  },
+  "outlier_analysis": {
+    "tenure": {
+      "lower_iqr_bound": -60.0,
+      "upper_iqr_bound": 124.0,
+      "flagged_count": 0,
+      "treatment": "Retained; robust scaling used"
+    },
+    "MonthlyCharges": {
+      "lower_iqr_bound": -45.844,
+      "upper_iqr_bound": 171.506,
+      "flagged_count": 0,
+      "treatment": "Retained; robust scaling used"
+    },
+    "TotalCharges": {
+      "lower_iqr_bound": -4746.3,
+      "upper_iqr_bound": 8985.1,
+      "flagged_count": 0,
+      "treatment": "Retained; robust scaling used"
+    }
+  },
+  "leakage_prevention": "Preprocessor fitted only on X_train; X_test was transformed only."
+}
